@@ -11,10 +11,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         // Initialize Spring Context with AppConfig
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        // Get CustomerController bean from Spring container (with all dependencies injected)
-        CustomerController controller = context.getBean(CustomerController.class);
+        ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+        CustomerController controller=context.getBean(CustomerController.class);
 
         System.out.println("===== Customer Management System =====\n");
 

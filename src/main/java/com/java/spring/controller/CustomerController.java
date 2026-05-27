@@ -2,12 +2,14 @@ package com.java.spring.controller;
 
 import com.java.spring.model.Customer;
 import com.java.spring.service.CustomerService;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 /**
  * Customer Controller - Handles customer operations
  */
 @Controller
+@Scope
 public class CustomerController {
 
     private CustomerService customerService;
