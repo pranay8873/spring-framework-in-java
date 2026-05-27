@@ -27,7 +27,7 @@
     <spring.version>6.2.16</spring.version>
 
     <!-- Main Class -->
-    <main.class>com.trainingmug.App</main.class>
+    <main.class>com.java.spring.main.Main</main.class>
 
     <!-- Jar Plugin Version -->
     <maven.jar.plugin.version>3.3.0</maven.jar.plugin.version>
