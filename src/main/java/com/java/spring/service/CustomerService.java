@@ -2,6 +2,7 @@ package com.java.spring.service;
 
 import com.java.spring.model.Customer;
 import com.java.spring.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class CustomerService {
 
     private CustomerRepository customerRepository;
 
-    // Constructor Injection - Service depends on Repository
+    @Autowired// Constructor Injection - Service depends on Repository
     public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }

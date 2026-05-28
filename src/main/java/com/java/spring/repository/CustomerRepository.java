@@ -1,6 +1,8 @@
 package com.java.spring.repository;
 
 import com.java.spring.model.Customer;
+import lombok.NonNull;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
@@ -14,8 +16,8 @@ import java.util.List;
 public class CustomerRepository {
     private List<Customer> customers = new ArrayList<>();
     private int nextId = 1;
-
-    public void save(Customer customer) {
+    @Autowired
+    public void save(@NonNull Customer customer) {
         customer.setId(nextId++);
         customers.add(customer);
     }
