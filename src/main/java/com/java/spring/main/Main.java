@@ -1,6 +1,6 @@
 package com.java.spring.main;
 
-import com.java.spring.config.AppConfig;
+import com.java.spring.config2.AppConfig;
 import com.java.spring.controller.CustomerController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -11,9 +11,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         // Initialize Spring Context with AppConfig
+//        ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+//        CustomerController controller=context.getBean(CustomerController.class);
+
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
         CustomerController controller=context.getBean(CustomerController.class);
-
         System.out.println("===== Customer Management System =====\n");
 
         // Create some customers
